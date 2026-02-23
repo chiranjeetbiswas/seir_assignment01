@@ -23,3 +23,16 @@ def get_body_tittel_link(response):
         if href:
             links.append(href)
     return cleanbody,title,links
+
+body,title,links=get_body_tittel_link(response)
+
+
+def word_count(str):
+    word_list=str.split()
+    word_frequency={}
+    for word in word_list:
+        if word in word_frequency:
+            word_frequency[word]+=1
+        else:
+            word_frequency[word]=1
+    return word_frequency
